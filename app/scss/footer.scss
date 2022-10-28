@@ -1,0 +1,266 @@
+.footer {
+    box-sizing: border-box;
+    position: relative;
+    background: #000000;
+    padding: 40px 0px;
+    &_mob {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        &_list {
+            width: 100%;
+            position: relative;
+            margin-top: 30px;
+            &::after {
+                content: "";
+                position: absolute;
+                left: 0px;
+                bottom: 0px;
+                width: 100%;
+                height: 1px;
+                background-color: rgba(255, 255, 255, 0.5);
+            }
+            &_item {
+                box-sizing: border-box;
+                padding: 10px 0px;
+                position: relative;
+                &::after {
+                    content: "";
+                    position: absolute;
+                    left: 0px;
+                    top: 0px;
+                    width: 100%;
+                    height: 1px;
+                    background-color: rgba(255, 255, 255, 0.5);
+                }
+                &_top {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    cursor: pointer;
+                    box-sizing: border-box;
+                    padding: 10px 0px;
+                    & h4 {
+                        font-family: 'SF Pro Display', sans-serif;
+                        font-weight: 400;
+                        font-size: 14px;
+                        line-height: 15px;
+                        color: #FFFFFF;
+                    }
+                    & button {
+                        transform: rotate(0deg);
+                        transition: transform 0.2s linear;
+                    }
+                }
+                &_body {
+                    box-sizing: border-box;
+                    padding: 0px 20px;
+                    max-height: 0px;
+                    visibility: hidden;
+                    transition: all 0.3s linear;
+                    box-sizing: border-box;
+                    & ul {
+                        & li {
+                            & p {
+                                font-family: 'SF Pro Display', sans-serif;
+                                font-weight: 300;
+                                font-size: 14px;
+                                line-height: 20px;
+                                color: #FFFFFF;
+                            }
+                            & a {
+                                font-family: 'SF Pro Display', sans-serif;
+                                font-weight: 300;
+                                font-size: 14px;
+                                line-height: 20px;
+                                color: #FFFFFF;
+                                & img {
+                                    margin-right: 8px;
+                                }
+                            }
+                        }
+                    }
+                }
+                &.active {
+                    & .footer_mob_list_item_top {
+                        & button {
+                            transform: rotate(180deg);
+                            transition: transform 0.2s linear;
+                        }
+                    }
+                    & .footer_mob_list_item_body {
+                        visibility: visible;
+                        max-height: 500px;
+                        transition: all 0.3s linear;
+                    }
+                }
+            }
+        }
+        &_text {
+            font-family: 'SF Pro Display';
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 18px;
+            text-align: center;
+            color: #FFFFFF;
+            margin-top: 44px;
+            width: 264px;
+        }
+    }
+    &_desk {
+        display: none;
+    }
+    @media (min-width: 992px) {
+        padding: 16px 0px 32px 0px;
+        &_mob {
+            display: none;
+        }
+        &_desk {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            &_logo {
+                & img {
+                    width: 75px;
+                }
+            }
+            &_list {
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+                align-items: flex-start;
+                position: relative;
+                margin-top: 16px;
+                &_item {
+                    & h4 {
+                        font-family: 'Cormorant', serif;
+                        font-weight: 400;
+                        font-size: 20px;
+                        line-height: 22px;
+                        color: #FFFFFF;
+                        margin-bottom: 12px;
+                    }
+                    & ul {
+                        & li {
+                            margin-top: 10px;
+                            & p {
+                                font-family: 'SF Pro Display', sans-serif;
+                                font-weight: 300;
+                                font-size: 14px;
+                                line-height: 15px;
+                                color: #FFFFFF;
+                                margin-bottom: 3px;
+                            }
+                            & a {
+                                font-family: 'SF Pro Display', sans-serif;
+                                font-weight: 300;
+                                font-size: 14px;
+                                line-height: 15px;
+                                color: #FFFFFF;
+                            }
+                        }
+                    }
+                    &_mail {
+                        font-family: 'SF Pro Display', sans-serif;
+                        font-weight: 300;
+                        font-size: 14px;
+                        line-height: 15px;
+                        color: #FFFFFF;
+                        margin-top: 12px;
+                    }
+                    &_call {
+                        width: 140px;
+                        height: 40px;
+                        box-sizing: border-box;
+                        font-family: 'SF Pro Display';
+                        font-weight: 400;
+                        font-size: 11px;
+                        line-height: 40px;
+                        text-transform: uppercase;
+                        color: #FFFFFF;
+                        background: #000000;
+                        border: 1px solid #FFFFFF;
+                        margin-top: 16px;
+                    }
+                    &_social {
+                        margin-top: 30px;
+                        & li {
+                            & a {
+                                & img {
+                                    margin-right: 8px;
+                                }
+                            }
+                        }
+                    }
+                    &_text {
+                        margin-top: 28px;
+                        & p {
+                            font-family: 'SF Pro Display', sans-serif;
+                            font-weight: 400;
+                            font-size: 12px;
+                            line-height: 16px;
+                            text-align: left;
+                            color: #FFFFFF;
+                        }
+                    }
+                    &:first-child {
+                        width: 210px;
+                    }
+                    &:nth-child(2) {
+                        width: 240px;
+                    }
+                    &:nth-child(3) {
+                        width: 170px;
+                    }
+                    &:last-child {
+                        width: 170px;
+                    }
+                }
+            }
+        }
+    }
+    @media (min-width: 1200px) {
+        padding: 40px 0px 50px 0px;
+        & .container {
+            width: 1200px;
+        }
+        &_desk {
+            &_logo {
+                & img {
+                    width: 130px;
+                }
+            }
+            &_list {
+                margin-top: 30px;
+                &_item {
+                    &_text {
+                        & p {
+                            font-size: 14px;
+                            line-height: 18px;
+                        }
+                    }
+                    &:nth-child(2) {
+                        width: 260px;
+                    }
+                }
+            }
+        }
+    }
+    @media (min-width: 1440px) {
+        & .container {
+            width: 1366px;
+        }
+        &_desk {
+            &_logo {
+                & img {
+                    width: auto;
+                }
+            }
+        }
+    }
+    @media (min-width: 1680px) {
+        & .container {
+            width: 1438px;
+        }
+    }
+}

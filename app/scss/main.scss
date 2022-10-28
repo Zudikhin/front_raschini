@@ -1,0 +1,236 @@
+.main {
+    position: relative;
+    &_slider {
+        &_desk {
+            display: none;
+        }
+        &_mob {
+            &_item {
+                & img {
+                    width: 100%;
+                    height: 535px;
+                    object-fit: cover;
+                }
+            }
+            & .slick-dots {
+                position: absolute;
+                bottom: 30px;
+                left: 50%;
+                transform: translateX(-50%);
+                display: flex;
+                align-items: center;
+                & li {
+                    background: #000000;
+                    border: 1px solid #FFFFFF;
+                    box-sizing: border-box;
+                    position: relative;
+                    border-radius: 50%;
+                    width: 12px;
+                    height: 12px;
+                    margin-left: 18px;
+                    &:first-child {
+                        margin-left: 0px;
+                    }
+                    & button {
+                        position: absolute;
+                        left: 0px;
+                        top: 0px;
+                        width: 100%;
+                        height: 100%;
+                        box-sizing: border-box;
+                        border-radius: 50%;
+                        opacity: 0;
+                    }
+                    &.slick-active {
+                        background: #FFFFFF;
+                        border: 1px solid #DBDBDB;
+                    }
+                }
+            }
+        }
+    }
+    &_block {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 66px;
+        width: calc(100% - 20px);
+        max-width: 448px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        & h2 {
+            font-family: 'Cormorant', serif;
+            font-weight: 600;
+            font-size: 24px;
+            line-height: 26px;
+            text-align: center;
+            color: #FFFFFF;
+        }
+        & p {
+            font-family: 'SF Pro Display', sans-serif;
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 25px;
+            text-align: center;
+            color: #FFFFFF;
+            margin-top: 3px;
+        }
+        & a {
+            width: 188px;
+            height: 40px;
+            background: #FFFFFF;
+            font-family: 'SF Pro Display', sans-serif;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 11px;
+            line-height: 40px;
+            text-transform: uppercase;
+            color: #000000;
+            text-align: center;
+            margin-top: 24px;
+        }
+    }
+    @media (min-width: 480px) {
+        &_slider {
+            &_mob {
+                &_item {
+                    & img {
+                        height: 480px;
+                    }
+                }
+            }
+        }
+        &_block {
+            & a {
+                margin-top: 16px;
+            }
+        }
+    }
+    @media (min-width: 768px) {
+        &_slider {
+            &_mob {
+                &_item {
+                    & img {
+                        height: 950px;
+                    }
+                }
+                & .slick-dots {
+                    bottom: 40px;
+                }
+            }
+        }
+        &_block {
+            bottom: 100px;
+            & h2 {
+                font-size: 26px;
+                line-height: 29px;
+            }
+            & a {
+                width: 222px;
+                height: 45px;
+                line-height: 45px;
+                font-size: 14px;
+                margin-top: 30px;
+            }
+        }
+    }
+    @media (min-width: 992px) {
+        &_slider {
+            &_desk {
+                display: block;
+                &_item {
+                    & img {
+                        width: 100%;
+                        height: 90vh;
+                        object-fit: cover;
+                    }
+                }
+                & .slick-dots {
+                    position: absolute;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    bottom: 130px;
+                    display: flex;
+                    align-items: center;
+                    & li {
+                        background: #000000;
+                        border: 1px solid #FFFFFF;
+                        box-sizing: border-box;
+                        position: relative;
+                        border-radius: 50%;
+                        width: 12px;
+                        height: 12px;
+                        margin-left: 18px;
+                        &:first-child {
+                            margin-left: 0px;
+                        }
+                        & button {
+                            position: absolute;
+                            left: 0px;
+                            top: 0px;
+                            width: 100%;
+                            height: 100%;
+                            box-sizing: border-box;
+                            border-radius: 50%;
+                            opacity: 0;
+                        }
+                        &.slick-active {
+                            background: #FFFFFF;
+                            border: 1px solid #DBDBDB;
+                        }
+                    }
+                }
+            }
+            &_mob {
+                display: none;
+            }
+        }
+        &_block {
+            max-width: 100%;
+            bottom: 190px;
+            & h2 {
+                font-size: 48px;
+                line-height: 53px;
+            }
+            & p {
+                font-family: 'Cormorant', serif;
+                font-size: 32px;
+                line-height: 35px;
+            }
+            & a {
+                margin-top: 35px;
+            }
+        }
+    }
+    @media (min-width: 1200px) {
+        &_slider {
+            &_desk {
+                & .slick-dots {
+                    bottom: 57px;
+                }
+            }
+        }
+        &_block {
+            bottom: 118px;
+        }
+    }
+    @media (min-width: 1920px) {
+        &_slider {
+            &_desk {
+                &_item {
+                    & img {
+                        height: 100vh;
+                    }
+                }
+                & .slick-dots {
+                    bottom: 130px;
+                }
+            }
+        }
+        &_block {
+            bottom: 190px;
+        }
+    }
+}
