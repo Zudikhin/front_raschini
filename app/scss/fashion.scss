@@ -18,6 +18,43 @@
                 &_tooltip {
                     position: absolute;
                     cursor: pointer;
+                    padding-top: 10px;
+                    &_link {
+                        position: absolute;
+                        left: 50%;
+                        transform: translateX(-50%);
+                        padding: 10px 15px;
+                        width: 135px;
+                        bottom: 40px;
+                        display: block;
+                        box-sizing: border-box;
+                        background: rgba(255, 255, 255, 0.55);
+                        backdrop-filter: blur(2px);
+                        display: none;
+                        &::after {
+                            content: "";
+                            position: absolute;
+                            left: 50%;
+                            transform: translateX(-50%);
+                            bottom: -16px;
+                            border: 8px solid transparent; 
+                            border-top: 8px solid rgba(255, 255, 255, 0.55);
+                        }
+                        & p {
+                            text-align: center;
+                            font-family: 'SF Pro Display';
+                            font-weight: 400;
+                            font-size: 12px;
+                            line-height: 13px;
+                            text-align: center;
+                            color: #000000;
+                        }
+                    }
+                    &:hover {
+                        & .fashion_block_item_feature_tooltip_link {
+                            display: block;
+                        }
+                    }
                 }
             }
             &_text {
@@ -111,6 +148,11 @@
                     text-transform: uppercase;
                     color: #FFFFFF;
                     margin-top: 24px;
+                    transition: all 0.3s linear;
+                    &:hover {
+                        background: rgba(0, 0, 0, 0.75);
+                        transition: all 0.3s linear;
+                    }
                 }
                 &_related {
                     display: none;
@@ -205,6 +247,9 @@
                     &_main {
                         height: 615px;
                         width: 492px;
+                    }
+                    &_tooltip {
+                        display: none;
                     }
                 }
                 &_text {

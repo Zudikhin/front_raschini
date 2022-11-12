@@ -46,6 +46,11 @@
                 text-transform: uppercase;
                 color: #000000;
                 margin-top: 20px;
+                transition: all 0.3s linear;
+                &:hover {
+                    background: rgba(255, 255, 255, 0.8);
+                    transition: all 0.3s linear;
+                }
             }
         }
     }

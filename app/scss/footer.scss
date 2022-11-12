@@ -96,6 +96,27 @@
                 }
             }
         }
+        &_call {
+            margin: 0 auto;
+            box-sizing: border-box;
+            width: 140px;
+            height: 41px;
+            line-height: 41px;
+            font-family: 'SF Pro Display';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 11px;
+            text-transform: uppercase;
+            color: #FFFFFF;
+            border: 1px solid #FFFFFF;
+            margin-top: 25px;
+            transition: all 0.3s linear;
+            &:hover {
+                transition: all 0.3s linear;
+                background: #8A7551;
+                border: 1px solid #8A7551;
+            }
+        }
         &_text {
             font-family: 'SF Pro Display';
             font-weight: 400;
@@ -103,12 +124,22 @@
             line-height: 18px;
             text-align: center;
             color: #FFFFFF;
-            margin-top: 44px;
+            margin-top: 25px;
             width: 264px;
         }
     }
     &_desk {
         display: none;
+    }
+    @media (min-width: 768px) {
+        &_mob {
+            &_call {
+                margin-top: 45px;
+            }
+            &_text {
+                margin-top: 35px;
+            }
+        }
     }
     @media (min-width: 992px) {
         padding: 16px 0px 32px 0px;
@@ -167,6 +198,24 @@
                         line-height: 15px;
                         color: #FFFFFF;
                         margin-top: 12px;
+                        position: relative;
+                        &::after {
+                            content: "";
+                            width: 100%;
+                            height: 1px;
+                            background-color: #fff;
+                            position: absolute;
+                            left: 0px;
+                            bottom: -5px;
+                            opacity: 0;
+                            transition: all 0.3s linear;
+                        }
+                        &:hover {
+                            &::after {
+                                opacity: 1;
+                                transition: all 0.3s linear;
+                            }
+                        }
                     }
                     &_call {
                         width: 140px;
@@ -181,6 +230,12 @@
                         background: #000000;
                         border: 1px solid #FFFFFF;
                         margin-top: 16px;
+                        transition: all 0.3s linear;
+                        &:hover {
+                            transition: all 0.3s linear;
+                            background: #8A7551;
+                            border: 1px solid #8A7551;
+                        }
                     }
                     &_social {
                         margin-top: 30px;
@@ -205,12 +260,94 @@
                     }
                     &:first-child {
                         width: 210px;
+                        & ul {
+                            & li {
+                                & a {
+                                    position: relative;
+                                    &::after {
+                                        content: "";
+                                        width: 100%;
+                                        height: 1px;
+                                        background-color: #fff;
+                                        position: absolute;
+                                        left: 0px;
+                                        bottom: -5px;
+                                        opacity: 0;
+                                        transition: all 0.3s linear;
+                                    }
+                                    &:hover {
+                                        &::after {
+                                            opacity: 1;
+                                            transition: all 0.3s linear;
+                                        }
+                                    }
+                                }
+                            }
+                        }
                     }
                     &:nth-child(2) {
                         width: 240px;
+                        & ul {
+                            & li {
+                                & a {
+                                    position: relative;
+                                    &::after {
+                                        content: "";
+                                        width: 100%;
+                                        height: 1px;
+                                        background-color: #fff;
+                                        position: absolute;
+                                        left: 0px;
+                                        bottom: -5px;
+                                        opacity: 0;
+                                        transition: all 0.3s linear;
+                                    }
+                                    &:hover {
+                                        &::after {
+                                            opacity: 1;
+                                            transition: all 0.3s linear;
+                                        }
+                                    }
+                                }
+                                &:first-child {
+                                    & a {
+                                        display: block;
+                                        width: 160px;
+                                        &::after {
+                                            bottom: -5px;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+
                     }
                     &:nth-child(3) {
                         width: 170px;
+                        & ul {
+                            & li {
+                                & a {
+                                    position: relative;
+                                    &::after {
+                                        content: "";
+                                        width: 100%;
+                                        height: 1px;
+                                        background-color: #fff;
+                                        position: absolute;
+                                        left: 0px;
+                                        bottom: -5px;
+                                        opacity: 0;
+                                        transition: all 0.3s linear;
+                                    }
+                                    &:hover {
+                                        &::after {
+                                            opacity: 1;
+                                            transition: all 0.3s linear;
+                                        }
+                                    }
+                                }
+                            }
+                        }
                     }
                     &:last-child {
                         width: 170px;
