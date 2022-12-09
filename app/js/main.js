@@ -64,6 +64,52 @@ $(document).ready(function () {
         }
     });
 
+    $(".cart_checkout_block_delivery_right_shop_current").click(function() {
+        $(".cart_checkout_block_delivery_right_shop_drop").slideToggle();
+        $(".cart_checkout_block_delivery_right_shop_current").toggleClass("active");
+    });
+
+    $(".cart_checkout_block_delivery_right_shop_drop_item").click(function() {
+        var text = $(this).children().text();
+        var id = $(this).attr("data-target");
+        $(".cart_checkout_block_delivery_right_shop_info_item").removeClass("active");
+        $(`#${id}`).addClass("active");
+        $(".cart_checkout_block_delivery_right_shop_current span").text(text);
+        $(".cart_checkout_block_delivery_right_shop_drop").slideToggle();
+        $(".cart_checkout_block_delivery_right_shop_current").removeClass("active");
+    });
+
+    $("#pickup").click(function() {
+        $(".cart_checkout_block_delivery_left_tabs_item").removeClass("active");
+        $(this).addClass("active");
+        $(".cart_checkout_block_delivery_right_wish").removeClass("active");
+        $(".cart_checkout_block_delivery_right_shop").addClass("active");
+        $(".cart_checkout_block_delivery_left_form .date").removeClass("hidden");
+        $(".cart_checkout_block_delivery_left_form .city").addClass("hidden");
+        $(".cart_checkout_block_delivery_left_form .address").addClass("hidden");
+        if($(window).width() > 1200) {
+            $(".cart_checkout_block_delivery_left_form_text").addClass("hide");
+            $(".cart_checkout_block_delivery_right_choice").addClass("hide");
+            $(".cart_checkout_block_delivery_right h3").addClass("hide");
+            $(".cart_checkout_block_delivery_left_choice").removeClass("hide");
+        }
+    });
+
+    $("#delivery").click(function() {
+        $(".cart_checkout_block_delivery_left_tabs_item").removeClass("active");
+        $(this).addClass("active");
+        $(".cart_checkout_block_delivery_right_wish").addClass("active");
+        $(".cart_checkout_block_delivery_right_shop").removeClass("active");
+        $(".cart_checkout_block_delivery_left_form .date").addClass("hidden");
+        $(".cart_checkout_block_delivery_left_form .city").removeClass("hidden");
+        $(".cart_checkout_block_delivery_left_form .address").removeClass("hidden");
+        if($(window).width() > 1200) {
+            $(".cart_checkout_block_delivery_left_form_text").removeClass("hide");
+            $(".cart_checkout_block_delivery_right_choice").removeClass("hide");
+            $(".cart_checkout_block_delivery_right h3").removeClass("hide");
+            $(".cart_checkout_block_delivery_left_choice").addClass("hide");
+        }
+    });
 
     $(".header_block_top_right_burger").click(function() {
         $(".modal_menu").addClass("active");
